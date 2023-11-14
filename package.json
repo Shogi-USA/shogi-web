@@ -1,43 +1,58 @@
 {
   "name": "shogi-web",
   "version": "0.1.0",
-  "private": true,
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack --mode production",
+    "start": "webpack-cli serve --mode development",
+    "lint": "eslint --fix 'src/**/*.{js,ts,jsx,tsx}'",
+    "lint-fix": "eslint --fix './src/**/*.{js,ts,jsx,tsx}' && prettier --write './src/**/*.{js,ts,jsx,tsx}'",
+    "prettier": "prettier --write './src/**/*.{js,ts,jsx,tsx}'",
+    "dev:scss": "typed-scss-modules src --watch",
+    "typegen:scss": "typed-scss-modules src"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/react": "^18.0.33",
+    "@types/react-dom": "^18.0.11",
+    "@typescript-eslint/eslint-plugin": "^5.57.1",
+    "@typescript-eslint/parser": "^5.57.1",
+    "babel-plugin-import": "^1.13.6",
+    "css-loader": "^6.7.3",
+    "eslint": "^8.37.0",
+    "eslint-config-prettier": "^8.8.0",
+    "lint-staged": "^13.2.0",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^2.8.7",
+    "sass-loader": "^13.2.2",
+    "style-loader": "^3.3.2",
+    "ts-loader": "^9.4.2",
+    "typed-scss-modules": "^7.1.0",
+    "typescript": "^5.0.3",
+    "webpack": "^5.78.0",
+    "webpack-bundle-analyzer": "^4.8.0",
+    "webpack-cli": "^5.0.1",
+    "webpack-dev-server": "^4.13.2"
+  },
   "dependencies": {
-    "@testing-library/jest-dom": "^5.17.0",
-    "@testing-library/react": "^13.4.0",
-    "@testing-library/user-event": "^13.5.0",
-    "@types/jest": "^27.5.2",
-    "@types/node": "^16.18.59",
-    "@types/react": "^18.2.33",
-    "@types/react-dom": "^18.2.14",
+    "@emotion/react": "^11.10.6",
+    "@emotion/styled": "^11.10.6",
+    "@fontsource/roboto": "^4.5.8",
+    "@hookform/resolvers": "^3.3.2",
+    "@mui/icons-material": "^5.11.16",
+    "@mui/lab": "^5.0.0-alpha.152",
+    "@mui/material": "^5.11.16",
+    "@mui/x-date-pickers": "^6.2.1",
+    "axios": "^1.6.0",
+    "dayjs": "^1.11.7",
+    "dotenv": "^16.0.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-scripts": "5.0.1",
-    "typescript": "^4.9.5",
-    "web-vitals": "^2.1.4"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+    "react-hook-form": "^7.48.2",
+    "react-router-dom": "^6.10.0",
+    "sass": "^1.61.0",
+    "zod": "^3.22.4"
   }
 }
